@@ -10,8 +10,8 @@
         <div id="nav">
             <div onclick="window.location.href='/'" id="home">首页</div>
             <div id="landr">
-                <div id="login">登入</div>
-                <div id="register">注册</div>
+                <div onclick="window.location.href='/Login'" id="login">登入</div>
+                <div onclick="window.location.href='/Register'" id="register">注册</div>
             </div>
         </div>
         <div id="banner">
