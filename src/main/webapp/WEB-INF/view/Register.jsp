@@ -20,14 +20,16 @@
         </div>
     </div>
 
+    <form action="/doReg" method="post">
     <div id="form-container">
         <h2>用户注册</h2>
-        <input type="text" placeholder="用户名" />
-        <input type="email" placeholder="邮箱" />
-        <input type="password" placeholder="密码" />
-        <input type="password" placeholder="确认密码" />
-        <button onclick="alert('注册成功')">注册</button>
+        <input name="username" type="text" placeholder="用户名" />
+<%--        <input type="email" placeholder="邮箱" />--%>
+        <input name="password" type="password" placeholder="密码" />
+<%--        <input type="password" placeholder="确认密码" />--%>
+        <button>注册</button>
     </div>
+    </form>
 
 </body>
 </html>

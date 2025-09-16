@@ -25,4 +25,16 @@ public class UserDAO {
         }
         return user;
     }
+    public static boolean addUser(User user) {
+        String sql = "insert into users (username, password) values (?, ?)";
+        try(Connection c = DBUtil.getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
+            ps.setString(1, user.getUsername());
+            ps.setString(2, user.getPassword());
+            ps.executeQuery();
+            return true;
+        }catch (SQLException e){
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
