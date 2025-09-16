@@ -21,12 +21,14 @@
     </div>
   </div>
 
+  <form action="/doLogin" method="post">
   <div id="form-container">
     <h2>用户登入</h2>
-    <input type="text" placeholder="用户名" />
-    <input type="password" placeholder="密码" />
-    <button onclick="alert('登入成功')">登入</button>
+      <input name="username" type="text" placeholder="input your username" />
+      <input name="password" type="password" placeholder="input your password" />
+      <button>登入</button>
   </div>
+  </form>
 
 </body>
 </html>
