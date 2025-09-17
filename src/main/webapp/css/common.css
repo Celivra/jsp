@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f6f5f1;
+    color: #333;
+}
+
+/* 导航栏 */
+#nav {
+    width: 100%;
+    background:linear-gradient(90deg, #36d1dc, #5b86e5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    padding: 0 0px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+#landr{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#home, #landr > div {
+    width: 110px;
+    height: 45px;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 8px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+#home{
+    margin-left: 200px;
+}
+#home:hover, #landr > div:hover {
+    background-color: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+#dashboard{
+    margin-right: 100px !important;
+}

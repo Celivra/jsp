@@ -9,8 +9,15 @@ public class UserService {
     public static User getUserByName(String username) {
         return userDAO.getUserByName(username);
     }
-    public static boolean addUser(User user) {
-        return userDAO.addUser(user);
+
+    //1:success 2:same username 0:server Error
+    public static short addUser(User user) {
+        if(getUserByName(user.getUsername()) != null){
+            return 2;
+        }
+        if(userDAO.addUser(user)){
+            return 1;
+        }else return 0;
     }
 
 }

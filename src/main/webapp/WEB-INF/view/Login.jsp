@@ -10,14 +10,19 @@
 <head>
   <title>Login</title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/landr.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css">
 </head>
 <body>
 
   <div id="nav">
     <div onclick="window.location.href='/'" id="home">首页</div>
     <div id="landr">
+      <% if(request.getSession().getAttribute("user") != null){ %>
+      <div onclick="window.location.href='/Dashboard'" id="dashboard">控制台</div>
+      <%}else{%>
       <div onclick="window.location.href='/Login'" id="login">登入</div>
       <div onclick="window.location.href='/Register'" id="register">注册</div>
+      <%}%>
     </div>
   </div>
 
@@ -28,9 +33,9 @@
       <input name="password" type="password" placeholder="输入密码" />
 
       <% if (request.getAttribute("NotFindUserInfo") != null){ %>
-      <div class="LoginError">没有找到用户</div>
+      <div class="LandrError">没有找到用户</div>
       <% }else if (request.getAttribute("PasswdError") != null){%>
-      <div class="LoginError">密码错误</div>
+      <div class="LandrError">密码错误</div>
       <%}%>
       <button>登入</button>
   </div>

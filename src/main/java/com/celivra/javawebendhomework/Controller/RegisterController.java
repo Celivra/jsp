@@ -18,8 +18,13 @@ public class RegisterController extends HttpServlet {
         String password = request.getParameter("password");
         User user = new User(username, password);
 
-        boolean flag = UserService.addUser(user);
-        request.setAttribute("RegStatus", flag);
-        request.getRequestDispatcher("/WEB-INF/view/Register.jsp").forward(request, response);
+        short flag = UserService.addUser(user);
+        //1:success 2:same username 0:server Error
+        if(flag ==2){
+            request.setAttribute("SameUsername", true);
+        }else if (flag ==0){
+            request.setAttribute("ServerError", true);
+        }
+        request.getRequestDispatcher("/Register").forward(request, response);
     }
 }
