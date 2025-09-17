@@ -24,8 +24,14 @@
   <form action="/doLogin" method="post">
   <div id="form-container">
     <h2>用户登入</h2>
-      <input name="username" type="text" placeholder="input your username" />
-      <input name="password" type="password" placeholder="input your password" />
+      <input name="username" type="text" placeholder="输入用户名" />
+      <input name="password" type="password" placeholder="输入密码" />
+
+      <% if (request.getAttribute("NotFindUserInfo") != null){ %>
+      <div class="LoginError">没有找到用户</div>
+      <% }else if (request.getAttribute("PasswdError") != null){%>
+      <div class="LoginError">密码错误</div>
+      <%}%>
       <button>登入</button>
   </div>
   </form>

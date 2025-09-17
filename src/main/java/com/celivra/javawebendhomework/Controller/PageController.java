@@ -14,7 +14,15 @@ import java.io.IOException;
         "/Dashboard","/dashboard"
 })
 public class PageController extends HttpServlet {
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        MainBody(request, response);
+    }
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        MainBody(request, response);
+    }
+    public void MainBody(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = request.getServletPath();
         switch (path){
             case "/Login":

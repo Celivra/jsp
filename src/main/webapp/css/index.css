@@ -8,7 +8,7 @@ body {
 /* 导航栏 */
 #nav {
     width: 100%;
-    background: linear-gradient(90deg, #e98f8f, #e2a5c3);
+    background:linear-gradient(90deg, #36d1dc, #5b86e5);
     display: flex;
     justify-content: space-between;
     align-items: center;

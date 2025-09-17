@@ -19,17 +19,25 @@ public class LoginController extends HttpServlet {
         User user = UserService.getUserByName(username);
 
         if(user == null){
-            req.getSession().setAttribute("NotFindUserInfo", true);
-            resp.sendRedirect("/Login");
+            System.out.println("not find user");
+
+            req.setAttribute("NotFindUserInfo", true);
+            req.getRequestDispatcher("/Login").forward(req, resp);
             return;
         }
 
         if(user.getPassword().equals(password)){
+            System.out.println("user logged in");
+
+            req.getSession().setAttribute("Logged", true);
             req.getSession().setAttribute("user", user);
-            resp.sendRedirect("/Dashboard");
+            req.getRequestDispatcher("/Dashboard").forward(req, resp);
         }
         else{
-            resp.sendRedirect("/Login");
+            System.out.println("password doesn't match");
+
+            req.setAttribute("PasswdError", true);
+            req.getRequestDispatcher("/Login").forward(req, resp);
         }
 
     }

@@ -8,7 +8,7 @@ body {
 /* 导航栏 */
 #nav {
     width: 100%;
-    background: linear-gradient(90deg, #e98f8f, #e2a5c3);
+    background:linear-gradient(90deg, #36d1dc, #5b86e5);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +64,7 @@ body {
 #form-container h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #e98f8f;
+    color: #5b86e5;
 }
 
 #form-container input {
@@ -78,15 +78,15 @@ body {
 }
 
 #form-container input:focus {
-    border-color: #e98f8f;
-    box-shadow: 0 0 8px rgba(233,143,143,0.3);
+    border-color: #5b86e5;
+    box-shadow: 0 0 8px rgba(143, 151, 233, 0.3);
     outline: none;
 }
-
 #form-container button {
     width: 100%;
     height: 45px;
-    background: linear-gradient(90deg, #e98f8f, #e2a5c3);
+    /*background: linear-gradient(90deg, #e98f8f, #e2a5c3);*/
+    background: linear-gradient(90deg, #36d1dc, #5b86e5);
     border: none;
     border-radius: 8px;
     color: white;
@@ -95,7 +95,7 @@ body {
     transition: all 0.3s ease;
 }
 #form-container button:hover {
-    background: linear-gradient(90deg, #e2a5c3, #e98f8f);
+    /*background: linear-gradient(90deg, #36d1dc, #5b86e5);*/
     transform: translateY(-2px);
 }
 
@@ -111,4 +111,8 @@ body {
     font-size: 14px;
     letter-spacing: 1px;
     margin-top: 50px;
+}
+.LoginError{
+    text-align: center;
+    color: red;
 }
