@@ -12,5 +12,6 @@
 </head>
 <body>
     dashborad
+    <a href="/Logout">logout</a>
 </body>
 </html>

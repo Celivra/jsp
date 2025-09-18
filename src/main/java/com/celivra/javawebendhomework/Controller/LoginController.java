@@ -29,9 +29,9 @@ public class LoginController extends HttpServlet {
         if(user.getPassword().equals(password)){
             System.out.println("user logged in");
 
-            req.getSession().setAttribute("Logged", true);
+//            req.getSession().setAttribute("Logged", true);
             req.getSession().setAttribute("user", user);
-            req.getRequestDispatcher("/Dashboard").forward(req, resp);
+            resp.sendRedirect("/Dashboard");
         }
         else{
             System.out.println("password doesn't match");
