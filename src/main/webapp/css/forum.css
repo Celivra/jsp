@@ -75,27 +75,37 @@ body{
 
     width: 20%;
     height: auto;
-    padding: 10px;
+    padding: 2% 2%;
 }
 
 #postfourm {
     width: 80%;
     height: 40px;
-    background: #002FA7;
+    background-color: #002FA7;
     color: white;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all 0.3s;
+}
+#postfourm:hover{
+    background-color: #0042e6;
 }
 .tag{
     box-sizing: border-box;
 
-    width: 30%;
+    width: 32%;
     margin: 5% 8%;
     padding: 2px;
     background-color: #e8e7e7;
     border-radius: 15px;
-
     text-align: center;
+
+    transition: all 0.3s;
+
+}
+.tag:hover{
+    background-color: #cdcdcd;
 }

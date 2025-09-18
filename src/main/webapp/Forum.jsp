@@ -25,16 +25,19 @@
         <div id="tagbox">
             <div id="tag">
                 <div>
-                    <div class="tag">A</div>
-                    <div class="tag">B</div>
+                    <div class="tag">tag1</div>
+                    <div class="tag">tag2</div>
                 </div>
                 <div>
-                    <div class="tag">C</div>
+                    <div class="tag">tag3</div>
+                    <div class="tag">tag4</div>
                 </div>
             </div>
             <div id="postfourm">POST</div>
         </div>
-        <div id="forumlist"></div>
+        <div id="forumlist">
+
+        </div>
         <div id="content">
             <h2>Content us</h2>
             <p>52xiaozhai@proton.me</p>
