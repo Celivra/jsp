@@ -31,7 +31,7 @@ public class LoginController extends HttpServlet {
 
 //            req.getSession().setAttribute("Logged", true);
             req.getSession().setAttribute("user", user);
-            resp.sendRedirect("/Dashboard");
+            resp.sendRedirect("/Forum");
         }
         else{
             System.out.println("password doesn't match");

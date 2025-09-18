@@ -11,7 +11,7 @@ import java.io.IOException;
 @WebServlet(name = "LoginController",urlPatterns= {
         "/Login","/login","/LOGIN",
         "/Register","/Reg","/register","/reg",
-        "/Dashboard","/dashboard"
+        "/Forum","/forum"
 })
 public class PageController extends HttpServlet {
     @Override
@@ -36,9 +36,9 @@ public class PageController extends HttpServlet {
             case "/reg":
                 request.getRequestDispatcher("/WEB-INF/view/Register.jsp").forward(request, response);
                 break;
-            case "/Dashboard":
-            case "/dashboard":
-                request.getRequestDispatcher("/WEB-INF/view/Dashboard.jsp").forward(request, response);
+            case "/Forum":
+            case "/forum":
+                request.getRequestDispatcher("/WEB-INF/view/Forum.jsp").forward(request, response);
                 break;
         }
     }
