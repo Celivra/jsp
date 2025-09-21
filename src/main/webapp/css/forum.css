@@ -68,7 +68,7 @@ body{
 }
 #forumlist{
     width: 50%;
-    height: 200px;
+    height: auto;
 }
 #content{
     box-sizing: border-box;
@@ -92,6 +92,30 @@ body{
 }
 #postfourm:hover{
     background-color: #0042e6;
+}
+
+#forumbox{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+.forum{
+    padding: 20px;
+    transition: all 0.3s;
+    border-bottom: 1px solid #dddddd;
+}
+.forum:hover{
+    background-color: #dddddd;
+}
+.forumName{
+    font-size: 20px;
+    font-weight: bold;
+}
+.forumDetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .tag{
     box-sizing: border-box;

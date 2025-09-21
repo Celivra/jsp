@@ -36,7 +36,24 @@
             <div id="postfourm">POST</div>
         </div>
         <div id="forumlist">
-
+            <div id="forumbox">
+                <!--jsp create-->
+                <div class="forum">
+                    <div class="forumName">test</div>
+                    <div class="forumDetails">
+                        <div class="publisher">admin</div>
+                        <div class="forumDate">1937-07-07 14:00</div>
+                    </div>
+                </div>
+                <div class="forum">
+                    <div class="forumName">test</div>
+                    <div class="forumDetails">
+                        <div class="publisher">admin</div>
+                        <div class="forumDate">1937-07-07 14:00</div>
+                    </div>
+                </div>
+                <!--jsp-->
+            </div>
         </div>
         <div id="content">
             <h2>Content us</h2>
