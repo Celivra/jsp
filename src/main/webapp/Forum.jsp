@@ -33,23 +33,23 @@
                     <div class="tag">tag4</div>
                 </div>
             </div>
-            <div id="postfourm">POST</div>
+            <div id="postButtom">POST</div>
         </div>
         <div id="forumlist">
             <div id="forumbox">
                 <!--jsp create-->
-                <div class="forum">
-                    <div class="forumName">test</div>
-                    <div class="forumDetails">
+                <div class="post">
+                    <div class="postName">test</div>
+                    <div class="postDetails">
                         <div class="publisher">admin</div>
-                        <div class="forumDate">1937-07-07 14:00</div>
+                        <div class="postDate">1937-07-07 14:00</div>
                     </div>
                 </div>
-                <div class="forum">
-                    <div class="forumName">test</div>
-                    <div class="forumDetails">
+                <div class="post">
+                    <div class="postName">test</div>
+                    <div class="postDetails">
                         <div class="publisher">admin</div>
-                        <div class="forumDate">1937-07-07 14:00</div>
+                        <div class="postDate">1937-07-07 14:00</div>
                     </div>
                 </div>
                 <!--jsp-->
