@@ -2,17 +2,13 @@ package com.celivra.javawebendhomework.Controller;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "LoginController",urlPatterns= {
+@WebServlet(name = "PageController",urlPatterns= {
         "/Login","/login","/LOGIN",
-        "/Register","/Reg","/register","/reg",
-        "/Forum","/forum"
-})
+        "/Register","/Reg","/register","/reg" })
 public class PageController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,10 +31,6 @@ public class PageController extends HttpServlet {
             case "/register":
             case "/reg":
                 request.getRequestDispatcher("/WEB-INF/view/Register.jsp").forward(request, response);
-                break;
-            case "/Forum":
-            case "/forum":
-                request.getRequestDispatcher("/WEB-INF/view/Forum.jsp").forward(request, response);
                 break;
         }
     }

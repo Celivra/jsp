@@ -9,6 +9,9 @@ public class UserService {
     public static User getUserByName(String username) {
         return userDAO.getUserByName(username);
     }
+    public static User getUserById(Long id) {
+        return userDAO.getUserById(id);
+    }
 
     //1:success 2:same username 0:server Error
     public static short addUser(User user) {

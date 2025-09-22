@@ -4,9 +4,7 @@ import com.celivra.javawebendhomework.Model.User;
 import com.celivra.javawebendhomework.Service.UserService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.*;
 
 import java.io.IOException;
 
@@ -29,7 +27,6 @@ public class LoginController extends HttpServlet {
         if(user.getPassword().equals(password)){
             System.out.println("user logged in");
 
-//            req.getSession().setAttribute("Logged", true);
             req.getSession().setAttribute("user", user);
             resp.sendRedirect("/Forum");
         }
