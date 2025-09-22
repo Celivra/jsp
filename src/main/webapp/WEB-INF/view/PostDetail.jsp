@@ -14,6 +14,12 @@
 <%
   Post post = (Post) request.getAttribute("post");
 %>
-this is <%=post.getId()%>
+<h1><%=post.getTitle()%></h1>
+<hr>
+<p style="background-color: bisque"><%=post.getContent()%></p><br><br>
+<div style="display: flex; justify-content: space-between">
+    <div>发布人:<%=post.getPublisherName()%></div>
+    <div>时间:<%=post.getFormattedDateTime()%></div>
+</div>
 </body>
 </html>

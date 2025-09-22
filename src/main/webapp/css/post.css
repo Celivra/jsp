@@ -1,0 +1,33 @@
+#backHome{
+    color: #002FA7;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d1d1d1;
+}
+#postBox{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+#postTitle{
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+#clickNum{
+    width: 100%;
+    text-align: right;
+    font-size: 14px;
+    color: #707070;
+}
+#postContent{
+    padding: 20px;
+    font-size: 18px;
+}
