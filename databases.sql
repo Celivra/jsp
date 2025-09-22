@@ -27,11 +27,12 @@ CREATE TABLE `post` (
   `title` varchar(255) DEFAULT NULL,
   `publisherId` bigint DEFAULT NULL,
   `content` longtext,
-  `DateTime` datetime DEFAULT NULL,
+  `dateTime` datetime DEFAULT NULL,
+  `clickNum` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `post_users_id_fk` (`publisherId`),
   CONSTRAINT `post_users_id_fk` FOREIGN KEY (`publisherId`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +41,7 @@ CREATE TABLE `post` (
 
 LOCK TABLES `post` WRITE;
 /*!40000 ALTER TABLE `post` DISABLE KEYS */;
-INSERT INTO `post` VALUES (1,'test',1,'hello world, this is a test essay','2025-09-21 21:43:12'),(2,'test2',1,'nimasile','2025-07-21 21:45:50');
+INSERT INTO `post` VALUES (1,'test',1,'hello world, this is a test essay','2025-09-21 21:43:12',10),(2,'test2',1,'nimasile','2025-07-21 21:45:50',2),(3,'nimasile',1,'hahahaha','2025-09-22 17:19:11',1);
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -78,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-09-21 21:58:04
+-- Dump completed on 2025-09-22 20:50:08
