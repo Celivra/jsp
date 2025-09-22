@@ -4,17 +4,22 @@ import com.celivra.javawebendhomework.Model.Post;
 import com.celivra.javawebendhomework.Service.PostService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.*;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.List;
 
-@WebServlet(name = "Forum", value = "/Forum")
+@WebServlet(name = "post", urlPatterns = {"/post"})
 public class PostController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Post> postList = PostService.findAllPost();
-        request.setAttribute("postList", postList);
-
-        request.getRequestDispatcher("/WEB-INF/view/Forum.jsp").forward(request, response);
+        String idStr = request.getParameter("id");
+        if (idStr != null) {
+            Long id = Long.parseLong(idStr);
+            Post post = PostService.findPostById(id); // 从数据库获取
+            request.setAttribute("post", post);
+            request.getRequestDispatcher("/WEB-INF/view/PostDetail.jsp").forward(request, response);
+        }
     }
+
 }

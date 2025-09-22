@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebFilter(filterName = "GreatFireWall", urlPatterns = {"/Forum"})
+@WebFilter(filterName = "GreatFireWall", urlPatterns = {"/Forum", "/post"})
 public class PageFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {

@@ -44,6 +44,7 @@
                     if (postList != null) {
                         for (Post post : postList) {
                 %>
+                <a href="<%= request.getContextPath() %>/post?id=<%= post.getId() %>">
                 <div class="post">
                     <div class="postName"><%= post.getTitle() %></div>
                     <div class="clickNum">浏览量:<%=post.getClickNum()%></div>
@@ -52,6 +53,7 @@
                         <div class="postDate"><%= post.getFormattedDateTime() %></div>
                     </div>
                 </div>
+                </a>
                 <%
                         }
                     }
